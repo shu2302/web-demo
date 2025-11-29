@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NewsLite — Đọc báo đẹp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">NL</div>
+        <div>
+          <h1>NewsLite</h1>
+          <p>Đọc tin nhanh, gọn và đẹp</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="q" placeholder="Tìm bài... (ví dụ: công nghệ, thể thao)" />
+        <button id="btnSearch">Tìm</button>
+      </div>
+
+      <div class="filters">
+        <h3>Chuyên mục</h3>
+        <div id="cats" class="chips"></div>
+      </div>
+
+      <div class="recent">
+        <h3 class="muted">Bài đọc gần đây</h3>
+        <div id="recentList"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="controls">
+        <div class="left">
+          <div class="title">Tin mới</div>
+          <div class="pill" id="activeCat">Tất cả</div>
+        </div>
+        <div class="right muted">Cập nhật giả lập • Không kết nối internet</div>
+      </div>
+
+      <div id="grid" class="cards"></div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal" tabindex="-1">
+    <div class="reader" role="dialog" aria-modal="true">
+      <button id="closeModal" class="close">✕</button>
+      <div id="articleContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
